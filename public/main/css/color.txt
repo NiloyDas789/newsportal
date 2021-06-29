@@ -1,0 +1,5 @@
+gree #32a521
+khoiary #ad1111
+   Raed #ED1C24 none repeat scroll 0 0;
+ct color:#90405b none repeat scroll 0 0
+blue #1D91C2
