@@ -209,7 +209,7 @@ class FrontController extends Controller
             ->offset(1)->limit(4)->get();
 
 
-        return view('newsportal.singlenews',compact('posts','recentnews','recentofsetnews'));
+        return view('newsPortal.singlenews',compact('posts','recentnews','recentofsetnews'));
     }
     public function catagory($id)
     {
@@ -256,6 +256,6 @@ class FrontController extends Controller
 
 
 
-        return view('newsportal.catagory',compact('catagory','catagory1ofset', 'catagory1ofset2','recentnews', 'recentofsetnews'));
+        return view('newsPortal.catagory',compact('catagory','catagory1ofset', 'catagory1ofset2','recentnews', 'recentofsetnews'));
     }
 }

@@ -23,7 +23,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 //Frontend Routes
-Route::get( '/newhome', 'App\Http\Controllers\FrontController@home' )->name( 'newhome' );
+Route::get( '/', 'App\Http\Controllers\FrontController@home' )->name( '/' );
 Route::get( '/news/{slug}', 'App\Http\Controllers\FrontController@news' )->name( 'website.news' );
 Route::get( '/catagory/{id}', 'App\Http\Controllers\FrontController@catagory' )->name( 'website.catagory' );
 

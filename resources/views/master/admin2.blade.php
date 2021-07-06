@@ -17,7 +17,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Theme style -->
   <link rel="stylesheet" href="{{asset('admin')}}/css/adminlte.min.css">
   <link rel="stylesheet" href="{{asset('admin')}}/css/toastr.min.css">
-  
+
   @yield('style')
 </head>
 <body class="hold-transition sidebar-mini">
@@ -82,7 +82,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </li>
 
       <!-- Messages Dropdown Menu -->
-      
+
     </ul>
   </nav>
   <!-- /.navbar -->
@@ -126,7 +126,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                           with font-awesome or any other icon font library -->
                       <!--  -->
                       <li class="nav-item">
-                        <a href="{{url('newhome')}}" class="nav-link">
+                        <a href="{{url('/')}}" class="nav-link">
                           <i class="nav-icon fas fa-th"></i>
                           <p>
                             Home
@@ -154,22 +154,22 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </ul>
                   </nav>
 
-                  
 
-                 
+
+
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  
+
     <div class="content-wrapper">
-   
+
     @yield('content')
-    
-    
-    
+
+
+
   </div>
   <!-- /.content-wrapper -->
 
@@ -209,7 +209,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 @yield('script')
 <script>
   @if(Session::has('success'))
-  toastr.success("{{ Session::get('success') }}")  
+  toastr.success("{{ Session::get('success') }}")
   @endif
 
   $(document).ready(function () {

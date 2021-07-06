@@ -2,6 +2,11 @@
 <html lang="en">
    <head>
       <!-- Required meta tags -->
+
+
+      @yield('meta')
+
+
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <!-- favicion -->
@@ -53,7 +58,7 @@
             <div class="container">
                <div class="logo-content">
                   <div class="logo">
-                     <a class="navbar-brand" style=" width: 400px;" href="{{url('/newhome')}}"><img class="img-fluid" src="{{asset($setting->site_logo)}}"></a>
+                     <a class="navbar-brand" style=" width: 400px;" href="{{url('/')}}"><img class="img-fluid" src="{{asset($setting->site_logo)}}"></a>
                   </div>
                   <!-- logo -->
                   <div class="banner-ads">
@@ -75,7 +80,7 @@
                <div class="collapse navbar-collapse" id="navbarNavDropdown">
                   <ul class="navbar-nav">
                      <li class="nav-item active">
-                        <a class="nav-link" href="/newhome"> <i class="fas fa-home"></i>  </a>
+                        <a class="nav-link" href="{{url('/')}}"> <i class="fas fa-home"></i>  </a>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" href="{{route('website.catagory',['id' => 1])}}">শীর্ষ সংবাদ</a>
@@ -300,5 +305,14 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
       <!-- custom js -->
       <script type="text/javascript" src="{{asset('main2')}}/js/custom.js"></script>
+
+
+
+
+      <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60e045b1338d6b72"></script>
+
+
+
    </body>
 </html>
