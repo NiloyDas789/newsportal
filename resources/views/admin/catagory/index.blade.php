@@ -12,7 +12,7 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="{{route('dashboard')}}">Dashboard</a></li>
+              <li class="breadcrumb-item"><a href="{{route('home')}}">Dashboard</a></li>
               <li class="breadcrumb-item active">Catagory</li>
             </ol>
           </div><!-- /.col -->
@@ -27,7 +27,7 @@
 	          <div class="col-lg-12">
               <div class="card">
               <div class="card-header">
-                
+
                 <div class=" d-flex justify-content-between align-items-center">
                 <h3 class="card-title">Catagory list</h3>
                 <a href="{{route('catagory.create')}}" class="btn btn-primary">Create Catagory</a>
@@ -37,13 +37,13 @@
               <!-- /.card-header -->
               <div class="card-body">
                 <table class="table table-bordered">
-                  <thead>                  
+                  <thead>
                     <tr>
                       <th style="width: 10px">Id</th>
                       <th>Name</th>
                       <th>Slug</th>
                       <th>Catagory Count</th>
-                    
+
                       <th style="width: 40px">Action</th>
                     </tr>
                   </thead>
@@ -65,7 +65,7 @@
                       @csrf
                       <button type="submit" class="btn btn-sm btn-danger"><i class="fas fa-trash"> </i></button>
                       </form>
-                      
+
                       </td>
                     </tr>
                   @endforeach
@@ -74,11 +74,11 @@
                   <td colspan="5">
                   <h5 class="text-center">No Tags Found</h5>
                   </td>
-                  
+
                   </tr>
 
                   @endif
-                    
+
                   </tbody>
                 </table>
               </div>
@@ -91,7 +91,7 @@
                         </div>
                     </div>
               </div>
-              
+
 
 
 
@@ -103,7 +103,7 @@
             </div>
             </div>
 
-        
+
 
 
 @endsection

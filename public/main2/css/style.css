@@ -41,7 +41,7 @@ common css
 
 }
 .sec-title .title h2{
-	
+
 }
 .sec-title .top-news h2{
 	background: red;
@@ -55,7 +55,7 @@ a{
 }
 
 .top-border{
- border-top: 1px solid #ff585e; 
+ border-top: 1px solid #ff585e;
 }
 /*
 ==========
@@ -204,7 +204,7 @@ top news area
 }
 .news-title h2{
 	font-size: 30px;
-	
+
 }
 .news-title h2 a.red{
 	text-decoration: none;
@@ -226,7 +226,7 @@ top news area
 
 .news-title h2.title a{
 	text-decoration: none;
-	
+
 }
 .sidebar{
 	border: 2px solid #ddd;
@@ -461,7 +461,7 @@ footer
 
 }
 .widget-social ul li a i{
-	
+
 	transition: .3s;
 }
 .widget-social ul li a:hover i{
@@ -469,7 +469,7 @@ footer
 }
 .widget-social ul li a:hover{
 	opacity: .8;
-	
+
 }
 .widget .widget-title h4{
 	font-size: 18px;
@@ -513,3 +513,30 @@ footer
 	bottom: 25px;
 	transition: opacity 0.2s ease-out;
 }
+
+    #search-output{
+        position: absolute;
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        box-sizing: border-box;
+        background: #fff;
+        left: 0;
+        display: none;
+        z-index: 2;
+        border: 1px solid #ff0000 ;
+        margin-top: 40px;
+    }
+
+    .search-result{
+        list-style: none;
+    }
+    .search-result li a{
+        padding: 0 0 5px;
+        display: block;
+        color: #333;
+    }
+    .search-result li:last-child a{
+        padding-bottom: 0;
+        
+    }

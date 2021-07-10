@@ -180,6 +180,17 @@ class FrontController extends Controller
 
         // End Recent News Queries
 
+
+
+        // Popular News Queries
+
+        $popularnews = DB::table('posts')
+            ->orderBy('created_at','ASC')
+            ->take(6)->get();
+
+
+        // End Popular News Queries
+
         // All News Queries
 
         $allnews = DB::table('posts')->get();
@@ -193,7 +204,7 @@ class FrontController extends Controller
             // return $topnewsofset;
             return view('newsPortal.home2', compact(['topnews1', 'topnews1ofset', 'topnews1ofset2','topnews2','pressbriefnews', 'mohanogornews', 'mohanogorofsetnews',
              'chottogramnews', 'chottogramofsetnews', 'jatiyonews', 'jatiyoofsetnews', 'rajnitinews', 'deshjurenews', 'deshjureofsetnews',
-             'internationalnews', 'internationalofsetnews', 'recentnews', 'allnews',]));
+             'internationalnews', 'internationalofsetnews', 'recentnews', 'allnews', 'popularnews',]));
     }
 
     public function news($slug)
@@ -258,4 +269,31 @@ class FrontController extends Controller
 
         return view('newsPortal.catagory',compact('catagory','catagory1ofset', 'catagory1ofset2','recentnews', 'recentofsetnews'));
     }
+
+
+    public function searchContent(){
+        $url = '/news';
+        $text = $_GET['text'];
+        $data = DB::table('posts')->where('title' , 'LIKE' , '%'.$text.'%')
+        ->orWhere('description' , 'like' , '%'.$text.'%')->take(5)->get();
+        $output = '' ;
+        echo '<ul class="search-results">';
+
+        if (count($data) > 0) {
+           foreach($data as $d){
+                echo '<li><a href="'.$url.'/'.$d->slug.'">'.$d->title.'</a></li>';
+            }
+        }
+        else {
+            echo '<li><a href="#"> Sorry! No data found. </a></a></li>';
+        }
+
+
+        echo '</ul>';
+        return $output;
+
+    }
+
+
 }
+

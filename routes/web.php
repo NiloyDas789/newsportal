@@ -17,15 +17,18 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 
-
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
 
 
 //Frontend Routes
 Route::get( '/', 'App\Http\Controllers\FrontController@home' )->name( '/' );
 Route::get( '/news/{slug}', 'App\Http\Controllers\FrontController@news' )->name( 'website.news' );
 Route::get( '/catagory/{id}', 'App\Http\Controllers\FrontController@catagory' )->name( 'website.catagory' );
+
+Route::get('/search-content','App\Http\Controllers\FrontController@searchContent');
 
 
 
@@ -67,16 +70,9 @@ Route::get('/post', function () {
 Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
 
 
-    Route::group(['prefix' => 'admin', 'middleware' => ['admin']], function () {
-    Route::get('/adm', function () {
-        return view('master.admin');
-    })->name('admin');
-    });
 
 
-    Route::get('/dashboard', function () {
-        return view('admin.dashboard');
-    })->name('dashboard');
+
     Route::resource('catagory', 'App\Http\Controllers\CatagoryController');
     Route::resource('tag', 'App\Http\Controllers\TagController');
     Route::resource('post', 'App\Http\Controllers\PostController');

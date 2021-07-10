@@ -12,7 +12,7 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="{{route('dashboard')}}">Dashboard</a></li>
+              <li class="breadcrumb-item"><a href="{{route('home')}}">Dashboard</a></li>
               <li class="breadcrumb-item"><a href="{{route('tag.index')}}">Tag</a></li>
               <li class="breadcrumb-item active">Create Tag</li>
             </ol>
@@ -28,7 +28,7 @@
 	          <div class="col-lg-12">
               <div class="card">
               <div class="card-header">
-                
+
                 <div class=" d-flex justify-content-between align-items-center">
                 <h3 class="card-title">Tag list</h3>
                 <a href="{{route('tag.index')}}" class="btn btn-primary">Go back to Tag List</a>
@@ -50,7 +50,7 @@
                     <label for="description">Description</label>
                     <textarea name="description" id="description"  rows="4" class="form-control" placeholder="Enter description"></textarea>
                   </div>
-                  
+
                 </div>
                 <!-- /.card-body -->
 
@@ -60,17 +60,17 @@
               </form>
                 </div>
               </div>
-              
+
               </div>
               <!-- /.card-body -->
-              
+
             </div>
             </div>
             </div>
             </div>
             </div>
 
-        
+
 
 
 @endsection

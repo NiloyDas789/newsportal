@@ -288,111 +288,31 @@
                         <!-- tab-pane -->
                         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                             <!-- tab-item -->
-                            <div class="tab-item cat-news">
-                                <div class="tabs">
-                                    <div class="tab-news">
-                                        <img src="{{asset('main2')}}/images/news-img.png"
-                                            class="img-fluid rounded mx-auto d-block" alt="">
+
+                            <!-- tab-item -->
+                            <!-- tab-item -->
+                            <!-- tab-item -->
+                            @foreach ($popularnews as $c)
+
+
+                                <div class="tab-item cat-news">
+                                    <div class="tabs">
+                                        <div class="tab-news">
+                                            <img src="{{asset($c->image)}}"
+                                                class="img-fluid rounded mx-auto d-block" alt="">
+                                        </div>
+                                        <!-- pos-rel -->
+                                        <div class="tab-headline">
+                                            <h2 class="title">
+                                                <a href="{{route('website.news',['slug' => $c->slug])}}" class="red">{{$c->title}}</a>
+                                            </h2>
+                                        </div>
                                     </div>
-                                    <!-- pos-rel -->
-                                    <div class="tab-headline">
-                                        <h2 class="title">
-                                            <a href="{{route('website.news',['slug' => $topnew->slug])}}" class="red">We do not support multiple</a>
-                                        </h2>
-                                    </div>
+                                    <!--sidebar-news  -->
                                 </div>
-                                <!--sidebar-news  -->
-                            </div>
-                            <!-- tab-item -->
-                            <!-- tab-item -->
-                            <!-- tab-item -->
-                            <div class="tab-item cat-news">
-                                <div class="tabs">
-                                    <div class="tab-news">
-                                        <img src="{{asset('main2')}}/images/news-img.png"
-                                            class="img-fluid rounded mx-auto d-block" alt="">
-                                    </div>
-                                    <!-- pos-rel -->
-                                    <div class="tab-headline">
-                                        <h2 class="title">
-                                            <a href="{{route('website.news',['slug' => $topnew->slug])}}" class="red">We do not support multiple</a>
-                                        </h2>
-                                    </div>
-                                </div>
-                                <!--sidebar-news  -->
-                            </div>
-                            <!-- tab-item -->
-                            <!-- tab-item -->
-                            <!-- tab-item -->
-                            <div class="tab-item cat-news">
-                                <div class="tabs">
-                                    <div class="tab-news">
-                                        <img src="{{asset('main2')}}/images/news-img.png"
-                                            class="img-fluid rounded mx-auto d-block" alt="">
-                                    </div>
-                                    <!-- pos-rel -->
-                                    <div class="tab-headline">
-                                        <h2 class="title">
-                                            <a href="{{route('website.news',['slug' => $topnew->slug])}}" class="red">We do not support multiple</a>
-                                        </h2>
-                                    </div>
-                                </div>
-                                <!--sidebar-news  -->
-                            </div>
-                            <!-- tab-item -->
-                            <!-- tab-item -->
-                            <!-- tab-item -->
-                            <div class="tab-item cat-news">
-                                <div class="tabs">
-                                    <div class="tab-news">
-                                        <img src="{{asset('main2')}}/images/news-img.png"
-                                            class="img-fluid rounded mx-auto d-block" alt="">
-                                    </div>
-                                    <!-- pos-rel -->
-                                    <div class="tab-headline">
-                                        <h2 class="title">
-                                            <a href="{{route('website.news',['slug' => $topnew->slug])}}" class="red">We do not support multiple</a>
-                                        </h2>
-                                    </div>
-                                </div>
-                                <!--sidebar-news  -->
-                            </div>
-                            <!-- tab-item -->
-                            <!-- tab-item -->
-                            <!-- tab-item -->
-                            <div class="tab-item cat-news">
-                                <div class="tabs">
-                                    <div class="tab-news">
-                                        <img src="{{asset('main2')}}/images/news-img.png"
-                                            class="img-fluid rounded mx-auto d-block" alt="">
-                                    </div>
-                                    <!-- pos-rel -->
-                                    <div class="tab-headline">
-                                        <h2 class="title">
-                                            <a href="{{route('website.news',['slug' => $topnew->slug])}}" class="red">We do not support multiple</a>
-                                        </h2>
-                                    </div>
-                                </div>
-                                <!--sidebar-news  -->
-                            </div>
-                            <!-- tab-item -->
-                            <!-- tab-item -->
-                            <!-- tab-item -->
-                            <div class="tab-item cat-news">
-                                <div class="tabs">
-                                    <div class="tab-news">
-                                        <img src="{{asset('main2')}}/images/news-img.png"
-                                            class="img-fluid rounded mx-auto d-block" alt="">
-                                    </div>
-                                    <!-- pos-rel -->
-                                    <div class="tab-headline">
-                                        <h2 class="title">
-                                            <a href="{{route('website.news',['slug' => $topnew->slug])}}" class="red">We do not support multiple</a>
-                                        </h2>
-                                    </div>
-                                </div>
-                                <!--sidebar-news  -->
-                            </div>
+
+
+                            @endforeach
                             <!-- tab-item -->
                             <!-- tab-item -->
                         </div>

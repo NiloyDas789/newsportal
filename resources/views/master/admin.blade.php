@@ -138,6 +138,29 @@ scratch. This page gets rid of all links and provides the needed markup only.
       </div>
 
       <!-- Sidebar Menu -->
+
+
+
+
+
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                    <!-- Add icons to the links using the .nav-icon class
+                        with font-awesome or any other icon font library -->
+                    <!--  -->
+                    <li class="nav-item">
+                        <a href="{{url('/home')}}" class="nav-link">
+                        <i class="nav-icon fas fa-th"></i>
+                        <p>
+                            Dashboard
+                            <!-- <span class="right badge badge-danger">New</span> -->
+                        </p>
+                        </a>
+                    </li>
+                    </ul>
+                </nav>
+
+
                   <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                       <!-- Add icons to the links using the .nav-icon class
@@ -154,6 +177,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       </li>
                     </ul>
                   </nav>
+
+
 
                   <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">

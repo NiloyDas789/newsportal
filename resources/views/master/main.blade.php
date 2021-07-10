@@ -89,7 +89,7 @@
                             </li>
                             <div class=" d-flex justify-content-between align-items-center">
                                 <h3 class="card-title"></h3>
-                                <a href="{{route('dashboard')}}" class="btn btn-primary">Go to Dashboard</a>
+                                <a href="{{route('home')}}" class="btn btn-primary">Go to Dashboard</a>
                             </div>
                             @endguest
                         </ul>
