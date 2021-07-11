@@ -20,51 +20,51 @@
             <div class="col-md-8 ">
                 <div class="row news-area">
 
-                    @if ($posts->count())
+                    @if($posts->count())
+
+
+                        <div class="col-md-12 ">
+                            <div class="addthis_inline_share_toolbox">
+
+                                <div class="news-item">
+                                    <div class="pos-rel">
+                                        <!-- feature news -->
+                                        <img src="{{asset($posts->image)}}" alt="news-image">
+
+                                        <div class="date-month">
+                                            <div class="date">13</div>
+                                            <div class="month">May</div>
+                                        </div><!-- date -->
+                                    </div><!-- pos-rel -->
+                                    <div class="news-title">
+                                        <h2 class="title">
+                                            <a href="{{route('website.news',['slug' => $posts->slug])}}"
+                                                class="red">{{$posts->title}}</a>
+                                        </h2>
+                                        <div class="author">
+                                            By: <a href="#"> &nbsp;{{$posts->user->name}}</a>
+                                        </div> <!-- author -->
+                                    </div> <!-- news-title -->
+                                    <div class="news-des-single">
+                                        {!!$posts->description!!}
+
+                                    </div> <!-- news-des -->
+                                </div><!-- news-item -->
+
+                                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                            </div>
+
+
+
+                        </div><!-- col-md-8 -->
+
+                    @else
+
 
                     <div style="font-size: 30px">
                         No News Found in this Category !
                     </div>
 
-
-                    @else
-
-
-
-                    <div class="col-md-12 ">
-                        <div class="addthis_inline_share_toolbox">
-
-                            <div class="news-item">
-                                <div class="pos-rel">
-                                    <!-- feature news -->
-                                    <img src="{{asset($posts->image)}}" alt="news-image">
-
-                                    <div class="date-month">
-                                        <div class="date">13</div>
-                                        <div class="month">May</div>
-                                    </div><!-- date -->
-                                </div><!-- pos-rel -->
-                                <div class="news-title">
-                                    <h2 class="title">
-                                        <a href="{{route('website.news',['slug' => $posts->slug])}}"
-                                            class="red">{{$posts->title}}</a>
-                                    </h2>
-                                    <div class="author">
-                                        By: <a href="#"> &nbsp;{{$posts->user->name}}</a>
-                                    </div> <!-- author -->
-                                </div> <!-- news-title -->
-                                <div class="news-des-single">
-                                    {!!$posts->description!!}
-
-                                </div> <!-- news-des -->
-                            </div><!-- news-item -->
-
-                            <!-- Go to www.addthis.com/dashboard to customize your tools -->
-                        </div>
-
-
-
-                    </div><!-- col-md-8 -->
 
                     @endif
 
